@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ExpeditionsProject.Project.View.ClientView.ClientExpedition.ClientInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExpeditionsProject.Project.View.ClientView.ClientExpedition"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Background>
+        <ImageBrush ImageSource="C:\Users\User\source\repos\ExpeditionsSolution\ExpeditionsProject\krggl.jpg"/>
+    </UserControl.Background>
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="RouteListView" ItemsSource="{Binding RouteInfos}" SelectedItem="{Binding SelectedRoute}" Margin="57,70,55,102" Grid.ColumnSpan="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID Клиента" DisplayMemberBinding="{Binding ID_Client}" />
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding ForeName}" />
+                    <GridViewColumn Header="Отчество" DisplayMemberBinding="{Binding Patronymic}" />
+                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding Surname}" />
+                    <GridViewColumn Header="Номер телефона" DisplayMemberBinding="{Binding NumberTelefon}" />
+                    <GridViewColumn Header="Уровень здоровья" DisplayMemberBinding="{Binding LevelHealth}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+
+
+        <Button x:Name="Back_Копировать" Content="Назад" HorizontalAlignment="Left" Margin="57,370,0,0" VerticalAlignment="Top" Height="25" Width="56" RenderTransformOrigin="0.48,0.168" IsDefault="True" Background="#FFE3B09D" FontFamily="Comic Sans MS" FontSize="14" BorderBrush="#FFDA2D2D" FontWeight="Bold" Command="{Binding Back}" Grid.ColumnSpan="2" />
+        <Label x:Name="Email_Копировать1" Grid.Column="1" Content="Информация о клиентах в группе" HorizontalAlignment="Left" Margin="185,30,0,0" VerticalAlignment="Top" Background="#FFE8E3E3" Foreground="#FF332424" FontFamily="Comic Sans MS" RenderTransformOrigin="1.291,-3.404" FontWeight="Bold" FontSize="18" Width="318" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</UserControl>
+

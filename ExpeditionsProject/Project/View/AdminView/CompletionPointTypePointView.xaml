@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="ExpeditionsProject.Project.View.AdminView.CompletionPointTypePointView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExpeditionsProject.Project.View.AdminView"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Background>
+        <ImageBrush ImageSource="C:\Users\User\source\repos\ExpeditionsSolution\ExpeditionsProject\krggl.jpg"/>
+    </UserControl.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="390" Margin="24,0,0,0" VerticalAlignment="Center" Width="638" Fill="#FFF7F4F4" StrokeThickness="4">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF440707" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+        </Rectangle>
+
+        <Button x:Name="Input"  Grid.Column="1" Content="Добавить" HorizontalAlignment="Left" Margin="245,367,0,0" VerticalAlignment="Top" Height="30" Width="197" RenderTransformOrigin="0.48,0.168" IsDefault="True" Background="#FFFF9A76" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FFDA2D2D" FontWeight="Bold" Command="{Binding  CompletionTypePoint}"/>
+        <Label x:Name="Email_Копировать1" Grid.Column="1" Content="Добовление типа точки " HorizontalAlignment="Left" Margin="229,34,0,0" VerticalAlignment="Top" Background="#FFE8E3E3" Foreground="#FF332424" FontFamily="Comic Sans MS" RenderTransformOrigin="1.291,-3.404" FontWeight="Bold" FontSize="18" Grid.ColumnSpan="2" Width="240"/>
+        <Label Grid.Column="1" Content="Название типа точки" HorizontalAlignment="Left" Margin="67,82,0,0" VerticalAlignment="Top" Background="#FFE3A2A2" Foreground="#FF332424" FontFamily="Comic Sans MS" Height="27"/>
+        <TextBox x:Name="NameTypePoint"  Text="{Binding  NameTypePoint, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Left" Margin="67,114,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="25" RenderTransformOrigin="2.628,1.602" />
+        <Label x:Name="Email_Копировать2" Grid.Column="1" Content="Описание типа точки" HorizontalAlignment="Left" Margin="67,151,0,0" VerticalAlignment="Top" Background="#FFE3A2A2" Foreground="#FF332424" FontFamily="Comic Sans MS" Height="27"/>
+        <TextBox x:Name="DescriptionTypePoint" Text="{Binding DescriptionTypePoint, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Left" Margin="67,183,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Height="25" RenderTransformOrigin="2.628,1.602" />
+        <Button x:Name="Back" Grid.Column="1" Content="Назад" HorizontalAlignment="Left" Margin="43,371,0,0" VerticalAlignment="Top" Height="25" Width="56" RenderTransformOrigin="0.48,0.168" IsDefault="True" Background="#FFE3B09D" FontFamily="Comic Sans MS" FontSize="14" BorderBrush="#FFDA2D2D" FontWeight="Bold" Command="{Binding Back}" />
+
+    </Grid>
+</UserControl>

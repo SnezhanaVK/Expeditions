@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ExpeditionsProject.Project.View.InstructorView.InstructorListExpeditionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExpeditionsProject.Project.View.InstructorView"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" >
+    <UserControl.Background>
+        <ImageBrush ImageSource="C:\Users\User\source\repos\ExpeditionsSolution\ExpeditionsProject\krggl.jpg"/>
+    </UserControl.Background>
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="RouteListView" ItemsSource="{Binding RouteInfos}" SelectedItem="{Binding SelectedRoute}" Margin="57,70,55,102" Grid.ColumnSpan="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID Маршрута" DisplayMemberBinding="{Binding ID_Itinerary}" />
+                    <GridViewColumn Header="Название маршрута" DisplayMemberBinding="{Binding NameItinerary}" />
+                    <GridViewColumn Header="ID Экспедиции" DisplayMemberBinding="{Binding ID_Expedition}" />
+                    <GridViewColumn Header="Дата начала" DisplayMemberBinding="{Binding DateStart}" />
+                    <GridViewColumn Header="Дата окончания" DisplayMemberBinding="{Binding DateFinish}" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="Email_Копировать1" Grid.Column="1" Content="Экспедиции инструктора" HorizontalAlignment="Left" Margin="245,30,0,0" VerticalAlignment="Top" Background="#FFE8E3E3" Foreground="#FF332424" FontFamily="Comic Sans MS" RenderTransformOrigin="1.291,-3.404" FontWeight="Bold" FontSize="18" Width="233" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,189 @@
+﻿<Window x:Class="ExpeditionsProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpeditionsProject"
+        xmlns:views="clr-namespace:ExpeditionsProject.Project.View"
+        xmlns:vm="clr-namespace:ExpeditionsProject.Project.ViewModel"
+        xmlns:Avm="clr-namespace:ExpeditionsProject.Project.ViewModel.AdminViewModel"
+        xmlns:Aview="clr-namespace:ExpeditionsProject.Project.View.AdminView"
+        xmlns:dopvm="clr-namespace:ExpeditionsProject.Project.ViewModel.AdminViewModel.DopExpeditionViewModel"
+        xmlns:dopview="clr-namespace:ExpeditionsProject.Project.View.AdminView.DopExpedition"
+        xmlns:ncvm="clr-namespace:ExpeditionsProject.Project.ViewModel.ClientViewModel.ClientNewItinerary"
+        xmlns:ncview="clr-namespace:ExpeditionsProject.Project.View.ClientView.ClientNewExpidition"
+        xmlns:atvm="clr-namespace:ExpeditionsProject.Project.ViewModel.AdminViewModel.AdminTable"
+        xmlns:cteview="clr-namespace:ExpeditionsProject.Project.View.ClientView.ClientExpedition"
+        xmlns:ctevm="clr-namespace:ExpeditionsProject.Project.ViewModel.ClientViewModel.ClientToExpedition"     
+        xmlns:atview="clr-namespace:ExpeditionsProject.Project.View.AdminView.AdminTableView"
+        xmlns:iview="clr-namespace:ExpeditionsProject.Project.View.InstructorView"
+        xmlns:ivm="clr-namespace:ExpeditionsProject.Project.ViewModel.InstructorViewModel"
+        Icon="C:\Users\User\source\repos\ExpeditionsSolution\ExpeditionsProject\icons8-альпы-96.png"
+        mc:Ignorable="d"
+        Title="Тур-Экспедиции" Height="450" Width="800">
+    <Grid>
+        <ContentControl Content="{Binding CurrentViewModel}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type vm:StartViewModel}">
+                    <views:StartView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:LoginAdminViewModel}">
+            <views:LoginAdmin/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:RoleViewModel}">
+                    <views:RoleView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:LoginClientViewModel}">
+                    <views:LoginClient/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:LoginInstructorViewModel}">
+                    <views:LoginInstructor/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:RoleRegistrationViewModel}">
+                    <views:RoleRegistrationView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:ClientRegistrationViewModel}">
+                    <views:ClientRegistrationView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:InstructorRegistrationViewModel}">
+                    <views:InstructorRegistrationView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:StartPanelAdminViewModel}">
+                    <views:StartPanelAdminView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:StartPanelClientViewModel}">
+                    <views:StartPanelClientView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type vm:StartPanelInstructorViewModel}">
+                    <views:StartPanelInstructorView/>
+                </DataTemplate>
+                
+                <DataTemplate DataType="{x:Type Avm:AdminPanelDopExpeditionViewModel}">
+                    <Aview:AdminPanelDopExpeditionView/>
+                </DataTemplate>
+                
+                <DataTemplate DataType="{x:Type Avm:AdminPanelItineraryViewModel}">
+                    <Aview:AdminPanelItineraryView/>
+                </DataTemplate>
+                
+                <DataTemplate DataType="{x:Type Avm:ExpeditionViewModel}">
+                    <Aview:ExpeditionView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type Avm:AdminPanelPointViewModel}">
+                    <Aview:AdminPanelPointView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type Avm:CompletionItineraryItineraryViewModel}">
+                    <Aview:CompletionItineraryItineraryView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type Avm:CompletionItineraryLevelItineraryViewModel}">
+                    <Aview:CompletionItineraryLevelItineraryView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type Avm:CompletionItineraryRegionViewModel}">
+                    <Aview:CompletionItineraryRegionView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type Avm:CompletionPointPointToItineraryViewModel}">
+                    <Aview:CompletionPointPointToItineraryView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type Avm:CompletionPointPointViewModel}">
+                    <Aview:CompletionPointPointView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type Avm:CompletionPointTypePointViewModel}">
+                    <Aview:CompletionPointTypePointView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type dopvm:EquipmentViewModel}">
+                    <dopview:EquipmentView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type dopvm:ProductToMenuViewModel}">
+                    <dopview:ProductToMenuView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type dopvm:TransferViewModel}">
+                    <dopview:TransferView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type ncvm:ClientNewItineraryViewModel}">
+                    <ncview:ClientNewItineraryView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type atvm:ItineraryTableViewModel}">
+                    <atview:ItineraryTableView/>
+                </DataTemplate>
+                
+                <DataTemplate DataType="{x:Type atvm:InstructorTableViewModel}">
+                    <atview:InstructorsTableView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type atvm:ClientTableViewModel}">
+                    <atview:ClientsTableView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type atvm:ExpeditionTibelViewModel}">
+                    <atview:ExpeditionTableView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type atvm:PointAdminTableViewModel}">
+                    <atview:PointAdminTableView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type ncvm:ClientNewExpeditionViewModel}">
+                    <ncview:ClientNewExpeditionView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type ctevm:ListExpeditionToClientViewModel}">
+                    <cteview:ListExpeditionToClientView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type ctevm:ClientMenuInfoExpeditionViewModel}">
+                    <cteview:ClientMenuInfoExpeditionView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type ctevm:ClientPointExpeditionViewModel}">
+                    <cteview:ClientPointExpeditionView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type ctevm:ClientInfoIntetaryViewModel}">
+                    <cteview:ClientInfoIntetaryView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type ctevm:ClientInfoViewModel}">
+                    <cteview:ClientInfoView/>
+                </DataTemplate>
+
+
+                <DataTemplate DataType="{x:Type ctevm:ClientInstructorInfoViewModel}">
+                    <cteview:ClientInstructorInfoView/>
+                </DataTemplate>
+
+
+                <DataTemplate DataType="{x:Type ctevm:ClientInfoExpeditionViewModel}">
+                    <cteview:ClientInfoExpeditionView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type ivm:InstructorListExpeditionViewModel}">
+                    <iview:InstructorListExpeditionView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type ivm:InstructorInfoExpeditionViewModel}">
+                    <iview:InstructorInfoExpeditionView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type ivm:InstructorInfoClientViewModel}">
+                    <iview:InstructorInfoClientView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type ncvm:ClientNewExpeditionAddViewModel}">
+                    <ncview:ClientNewExpeditionAddView/>
+                </DataTemplate>
+
+
+            </ContentControl.Resources>
+        </ContentControl>
+    </Grid>
+</Window>
+
+    
